@@ -223,3 +223,27 @@ console.log(airline.lastIndexOf("r"));
 console.log(airline.slice(4));
 //Output
 //Air Portugal
+
+//Extracting part of a string that we recieve.
+console.log(airline.slice(0, airline.indexOf(" ")));
+//Output
+//TAP
+
+console.log(airline.slice(airline.lastIndexOf(" ") + 1));
+//Output
+//Portugal
+
+//Tests the last letter of a string to see if someone has a middle seat or not.
+const checkMiddleSeat = (seat) => {
+  //B are E are middle seats
+  const s = seat.slice(-1);
+  if (s === "B" || s === "E") {
+    console.log("You got the middle seat");
+  } else {
+    console.log("You got lucky");
+  }
+};
+
+checkMiddleSeat("11B");
+checkMiddleSeat("23C");
+checkMiddleSeat("3E");
