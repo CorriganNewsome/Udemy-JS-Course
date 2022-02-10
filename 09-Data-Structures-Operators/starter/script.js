@@ -194,56 +194,69 @@ GOOD LUCK 😀
 // console.log([...question]);
 
 //More about strings
+// const airline = "TAP Air Portugal";
+// const plane = "A320";
+
+// console.log(plane[0]);
+// //Output
+// // A
+// console.log(plane[1]);
+// //Output
+// // 3
+// console.log(plane[2]);
+// //Output
+// // 2
+// console.log("8737"[0]);
+// //Output
+// // 8
+// console.log(airline.length);
+// //Output
+// // 16
+// console.log(airline.indexOf("r"));
+// //Output
+// // 6
+// console.log(airline.lastIndexOf("r"));
+// //Output
+// // 10
+
+// //example of a slice method. Slice method extracts part of a string.
+// console.log(airline.slice(4));
+// //Output
+// //Air Portugal
+
+// //Extracting part of a string that we recieve.
+// console.log(airline.slice(0, airline.indexOf(" ")));
+// //Output
+// //TAP
+
+// console.log(airline.slice(airline.lastIndexOf(" ") + 1));
+// //Output
+// //Portugal
+
+// //Tests the last letter of a string to see if someone has a middle seat or not.
+// const checkMiddleSeat = (seat) => {
+//   //B are E are middle seats
+//   const s = seat.slice(-1);
+//   if (s === "B" || s === "E") {
+//     console.log("You got the middle seat");
+//   } else {
+//     console.log("You got lucky");
+//   }
+// };
+
+// checkMiddleSeat("11B");
+// checkMiddleSeat("23C");
+// checkMiddleSeat("3E");
+
 const airline = "TAP Air Portugal";
 const plane = "A320";
 
-console.log(plane[0]);
-//Output
-// A
-console.log(plane[1]);
-//Output
-// 3
-console.log(plane[2]);
-//Output
-// 2
-console.log("8737"[0]);
-//Output
-// 8
-console.log(airline.length);
-//Output
-// 16
-console.log(airline.indexOf("r"));
-//Output
-// 6
-console.log(airline.lastIndexOf("r"));
-//Output
-// 10
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
 
-//example of a slice method. Slice method extracts part of a string.
-console.log(airline.slice(4));
-//Output
-//Air Portugal
-
-//Extracting part of a string that we recieve.
-console.log(airline.slice(0, airline.indexOf(" ")));
-//Output
-//TAP
-
-console.log(airline.slice(airline.lastIndexOf(" ") + 1));
-//Output
-//Portugal
-
-//Tests the last letter of a string to see if someone has a middle seat or not.
-const checkMiddleSeat = (seat) => {
-  //B are E are middle seats
-  const s = seat.slice(-1);
-  if (s === "B" || s === "E") {
-    console.log("You got the middle seat");
-  } else {
-    console.log("You got lucky");
-  }
-};
-
-checkMiddleSeat("11B");
-checkMiddleSeat("23C");
-checkMiddleSeat("3E");
+//Fix capitalization in name
+const passenger = "jOnAs";
+const passengerLower = passenger.toLowerCase();
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect);
