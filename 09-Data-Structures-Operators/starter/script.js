@@ -5,42 +5,42 @@
 //   "_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30";
 
 // Data needed for first part of the section
-const weekdays = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
-const restaurant = {
-  name: "Classico Italiano",
-  location: "Via Angelo Tavanti 23, Firenze, Italy",
-  categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
-  starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
-  mainMenu: ["Pizza", "Pasta", "Risotto"],
-  order(starterIndex, mainIndex) {
-    return this.starterMenu[starterIndex], this.mainMenu[mainIndex];
-  },
-  orderDelievered({
-    starterIndex = 1,
-    mainIndex = 0,
-    time = "20:00",
-    address,
-  }) {
-    console.log(
-      `Order recieved! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delievered to ${address} at ${time}`
-    );
-  },
+// const weekdays = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
+// const restaurant = {
+//   name: "Classico Italiano",
+//   location: "Via Angelo Tavanti 23, Firenze, Italy",
+//   categories: ["Italian", "Pizzeria", "Vegetarian", "Organic"],
+//   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
+//   mainMenu: ["Pizza", "Pasta", "Risotto"],
+//   order(starterIndex, mainIndex) {
+//     return this.starterMenu[starterIndex], this.mainMenu[mainIndex];
+//   },
+//   orderDelievered({
+//     starterIndex = 1,
+//     mainIndex = 0,
+//     time = "20:00",
+//     address,
+//   }) {
+//     console.log(
+//       `Order recieved! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delievered to ${address} at ${time}`
+//     );
+//   },
 
-  openingHours: {
-    [weekdays[3]]: {
-      open: 12,
-      close: 22,
-    },
-    [weekdays[4]]: {
-      open: 11,
-      close: 23,
-    },
-    [weekdays[5]]: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-  },
-};
+//   openingHours: {
+//     [weekdays[3]]: {
+//       open: 12,
+//       close: 22,
+//     },
+//     [weekdays[4]]: {
+//       open: 11,
+//       close: 23,
+//     },
+//     [weekdays[5]]: {
+//       open: 0, // Open 24 hours
+//       close: 24,
+//     },
+//   },
+// };
 
 ///////////////////////////////////////
 // Coding Challenge #1
@@ -248,8 +248,8 @@ GOOD LUCK 😀
 // checkMiddleSeat("23C");
 // checkMiddleSeat("3E");
 
-const airline = "TAP Air Portugal";
-const plane = "A320";
+// const airline = "TAP Air Portugal";
+// const plane = "A320";
 
 // console.log(airline.toLowerCase());
 // console.log(airline.toUpperCase());
@@ -261,14 +261,14 @@ const plane = "A320";
 //   passengerLower[0].toUpperCase() + passengerLower.slice(1);
 // console.log(passengerCorrect);
 
-let passenger = (name) => {
-  const passengerLower = name.toLowerCase();
-  const passengerCorrect =
-    passengerLower[0].toUpperCase() + passengerLower.slice(1);
-  console.log(passengerCorrect);
-};
+// let passenger = (name) => {
+//   const passengerLower = name.toLowerCase();
+//   const passengerCorrect =
+//     passengerLower[0].toUpperCase() + passengerLower.slice(1);
+//   console.log(passengerCorrect);
+// };
 
-passenger("cOrRiGaN");
+// passenger("cOrRiGaN");
 
 //comparing emails
 // const email = "hello@jonas.io";
@@ -285,10 +285,24 @@ passenger("cOrRiGaN");
 //   console.log("Emails don't match");
 // }
 
-const email = (emailEntered) => {
-  const normalizedEmail = emailEntered.toLowerCase().trim();
-  console.log(emailEntered);
-  console.log(normalizedEmail);
-};
+// const email = (emailEntered) => {
+//   const normalizedEmail = emailEntered.toLowerCase().trim();
+//   console.log(emailEntered);
+//   console.log(normalizedEmail);
+// };
 
-email("  corRigan.neWsome@GmAil.Com");
+// email("  corRigan.neWsome@GmAil.Com");
+
+//replacing
+const priceGB = "288,97￡";
+const priceUS = priceGB.replaceAll("￡", "$").replace(",", ".");
+console.log(priceUS);
+
+const announcement =
+  "All passengers come to boarding door 23, Boarding door 23";
+
+const correctAnnouncement = announcement.replaceAll("door", "gate");
+console.log(correctAnnouncement);
+//Output
+//288.97$
+//All passengers come to boarding gate 23, Boarding gate 23
