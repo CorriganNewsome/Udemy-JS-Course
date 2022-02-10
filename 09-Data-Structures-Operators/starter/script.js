@@ -192,3 +192,34 @@ GOOD LUCK 😀
 
 // //Converting a map back to an array.
 // console.log([...question]);
+
+//More about strings
+const airline = "TAP Air Portugal";
+const plane = "A320";
+
+console.log(plane[0]);
+//Output
+// A
+console.log(plane[1]);
+//Output
+// 3
+console.log(plane[2]);
+//Output
+// 2
+console.log("8737"[0]);
+//Output
+// 8
+console.log(airline.length);
+//Output
+// 16
+console.log(airline.indexOf("r"));
+//Output
+// 6
+console.log(airline.lastIndexOf("r"));
+//Output
+// 10
+
+//example of a slice method. Slice method extracts part of a string.
+console.log(airline.slice(4));
+//Output
+//Air Portugal
