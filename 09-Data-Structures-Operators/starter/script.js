@@ -308,15 +308,15 @@ GOOD LUCK 😀
 //All passengers come to boarding gate 23, Boarding gate 23
 
 //Practicing exercise
-const checkBaggage = (items) => {
-  const baggage = items.toLowerCase();
-  if (baggage.includes("knife") || baggage.includes("gun")) {
-    console.log("You are not allowed on board");
-  } else {
-    console.log("Welcome aboard!");
-  }
-};
+// const checkBaggage = (items) => {
+//   const baggage = items.toLowerCase();
+//   if (baggage.includes("knife") || baggage.includes("gun")) {
+//     console.log("You are not allowed on board");
+//   } else {
+//     console.log("Welcome aboard!");
+//   }
+// };
 
-checkBaggage("I have a laptop, some Food and a pocket Knife");
-checkBaggage("Socks and camera");
-checkBaggage("Snacks and a gun");
+// checkBaggage("I have a laptop, some Food and a pocket Knife");
+// checkBaggage("Socks and camera");
+// checkBaggage("Snacks and a gun");
