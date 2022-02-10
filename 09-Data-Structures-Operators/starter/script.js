@@ -251,12 +251,21 @@ GOOD LUCK 😀
 const airline = "TAP Air Portugal";
 const plane = "A320";
 
-console.log(airline.toLowerCase());
-console.log(airline.toUpperCase());
+// console.log(airline.toLowerCase());
+// console.log(airline.toUpperCase());
 
-//Fix capitalization in name
-const passenger = "jOnAs";
-const passengerLower = passenger.toLowerCase();
-const passengerCorrect =
-  passengerLower[0].toUpperCase() + passengerLower.slice(1);
-console.log(passengerCorrect);
+// //Fix capitalization in name
+// const passenger = "jOnAs";
+// const passengerLower = passenger.toLowerCase();
+// const passengerCorrect =
+//   passengerLower[0].toUpperCase() + passengerLower.slice(1);
+// console.log(passengerCorrect);
+
+let passenger = (name) => {
+  const passengerLower = name.toLowerCase();
+  const passengerCorrect =
+    passengerLower[0].toUpperCase() + passengerLower.slice(1);
+  console.log(passengerCorrect);
+};
+
+passenger("cOrRiGaN");
