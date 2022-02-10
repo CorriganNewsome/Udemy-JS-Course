@@ -294,15 +294,29 @@ GOOD LUCK 😀
 // email("  corRigan.neWsome@GmAil.Com");
 
 //replacing
-const priceGB = "288,97￡";
-const priceUS = priceGB.replaceAll("￡", "$").replace(",", ".");
-console.log(priceUS);
+// const priceGB = "288,97￡";
+// const priceUS = priceGB.replaceAll("￡", "$").replace(",", ".");
+// console.log(priceUS);
 
-const announcement =
-  "All passengers come to boarding door 23, Boarding door 23";
+// const announcement =
+//   "All passengers come to boarding door 23, Boarding door 23";
 
-const correctAnnouncement = announcement.replaceAll("door", "gate");
-console.log(correctAnnouncement);
+// const correctAnnouncement = announcement.replaceAll("door", "gate");
+// console.log(correctAnnouncement);
 //Output
 //288.97$
 //All passengers come to boarding gate 23, Boarding gate 23
+
+//Practicing exercise
+const checkBaggage = (items) => {
+  const baggage = items.toLowerCase();
+  if (baggage.includes("knife") || baggage.includes("gun")) {
+    console.log("You are not allowed on board");
+  } else {
+    console.log("Welcome aboard!");
+  }
+};
+
+checkBaggage("I have a laptop, some Food and a pocket Knife");
+checkBaggage("Socks and camera");
+checkBaggage("Snacks and a gun");
