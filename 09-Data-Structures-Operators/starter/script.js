@@ -269,3 +269,26 @@ let passenger = (name) => {
 };
 
 passenger("cOrRiGaN");
+
+//comparing emails
+// const email = "hello@jonas.io";
+// const loginEmail = "  Hello@Jonas.Io \n";
+// const lowerEmail = loginEmail.toLowerCase();
+//.trim gets rid of white space at the beginning of a string.
+// const normalizedEmail = loginEmail.toLowerCase().trim();
+
+// console.log(normalizedEmail);
+
+// if (email === normalizedEmail) {
+//   console.log("Emails match");
+// } else {
+//   console.log("Emails don't match");
+// }
+
+const email = (emailEntered) => {
+  const normalizedEmail = emailEntered.toLowerCase().trim();
+  console.log(emailEntered);
+  console.log(normalizedEmail);
+};
+
+email("  corRigan.neWsome@GmAil.Com");
