@@ -321,6 +321,7 @@ GOOD LUCK 😀
 // checkBaggage("Socks and camera");
 // checkBaggage("Snacks and a gun");
 
+//Split and Join
 console.log("a+very+nice+string".split("+"));
 console.log("Corrigan Newsome".split(" "));
 
@@ -329,3 +330,16 @@ const [firstName, lastName] = "Corrigan Newsome".split(" ");
 const newName = ["Mr", firstName, lastName.toUpperCase()].join(" ");
 
 console.log(newName);
+
+//Changing all the first letter of the names from a string.
+const capName = (name) => {
+  const names = name.split(" ");
+  const namesUpper = [];
+  for (const n of names) {
+    namesUpper.push(n[0].toUpperCase() + n.slice(1));
+  }
+  console.log(namesUpper.join(" "));
+};
+
+capName("jessica ann smith davis");
+capName("jonas schedtmann");
