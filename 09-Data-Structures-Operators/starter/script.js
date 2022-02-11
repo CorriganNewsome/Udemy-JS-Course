@@ -320,3 +320,12 @@ GOOD LUCK 😀
 // checkBaggage("I have a laptop, some Food and a pocket Knife");
 // checkBaggage("Socks and camera");
 // checkBaggage("Snacks and a gun");
+
+console.log("a+very+nice+string".split("+"));
+console.log("Corrigan Newsome".split(" "));
+
+const [firstName, lastName] = "Corrigan Newsome".split(" ");
+
+const newName = ["Mr", firstName, lastName.toUpperCase()].join(" ");
+
+console.log(newName);
