@@ -12,13 +12,13 @@ const Person = function (firstName, birthyear) {
   Never use a method inside of a constructor function, because then everytime you run this funciton you will
   also be bringing along this method which you may not necessairly need. Use protoypes instead for that 
   functionality. 
-  
+
   this.calcAge = function () {
      console.log(2037 - this.birthyear);
    };
   */
 };
-
+//New Instance of Person Object
 const jonas = new Person("Jonas", 1991);
 
 //BTS of the 'new' keyword
@@ -30,9 +30,11 @@ const jonas = new Person("Jonas", 1991);
 const matilda = new Person("Matilda", 2017);
 const jack = new Person("Jack", 1975);
 
-const jay = "Jay";
+//Prototypes
+Person.prototype.calcAge = function () {
+  console.log(2037 - this.birthyear);
+};
 
-console.log(jonas instanceof Person);
-console.log(jay instanceof Person);
+jonas.calcAge();
 
-//Prototypes and Prototypal Inheritance
+console.log(jonas.__proto__);
